@@ -1,12 +1,12 @@
-DROP TABLE IF EXISTS katadasar;
-DROP TABLE IF EXISTS jeniskata;
+DROP TABLE katadasar;
+DROP TABLE jeniskata;
 
-CREATE TABLE IF NOT EXISTS jeniskata (
+CREATE TABLE jeniskata (
   kodejenis VARCHAR(4) PRIMARY KEY,
   keterangan VARCHAR(24) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS katadasar (
+CREATE TABLE katadasar (
   kata VARCHAR(20) PRIMARY KEY,
   jeniskata VARCHAR(4) NOT NULL,
   FOREIGN KEY (jeniskata) REFERENCES jeniskata (kodejenis)
@@ -28554,4 +28554,3 @@ INSERT INTO katadasar (kata, jeniskata) VALUES ('zurafah', 'n');
 INSERT INTO katadasar (kata, jeniskata) VALUES ('zuriah', 'n');
 INSERT INTO katadasar (kata, jeniskata) VALUES ('zus', 'n');
 COMMIT;
-
