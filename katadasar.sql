@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS jeniskata (
 );
 
 CREATE TABLE IF NOT EXISTS katadasar (
-  kata VARCHAR(18) PRIMARY KEY,
+  kata VARCHAR(20) PRIMARY KEY,
   jeniskata VARCHAR(4) NOT NULL,
   FOREIGN KEY (jeniskata) REFERENCES jeniskata (kodejenis)
 );
